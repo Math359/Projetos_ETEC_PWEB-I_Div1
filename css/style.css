@@ -9,6 +9,30 @@ body{
     /*Fontes: Segoe UI é a primeira opção se não tiver, vai tentando as próximas*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6; /*altura entre as linhas 1.6x o tamanho da fonte*/
-    color: #333; /*cor do texto 'cinza escuro'*/ 
+    color: #ffffff; /*cor do texto 'cinza escuro'*/
+    background: linear-gradient(135deg, rgb(243, 25, 189) 0%, #8000ff 100%);
+    min-height: 100vh;/*vh=viewport height, minimo de 100% da altura da tela*/
 }
-
+/*header (cabeçalho)*/
+header{
+background-color: rgba(rgb(114, 29, 29), rgb(18, 5, 129), alpha);
+/*branco com 0.95=95%*/
+padding: 1rem 5%;/*rem= 1.6px (tamanho padrao da fonte),5% da largura do contador*/
+display: flex;/*ativa o flexbox para layout flexivel*/
+align-items: center;/*alinha os itens verticalmente ao centro*/
+justify-content: space-between;/*epaço entre os itens(logo de um lado menu nop outro).*/
+flex-wrap: wrap;/*permite a quebra de linhas em telas pequenas*/
+gap: 1rem;/*espaçamento ente os itens flexiveis*/
+background-origin:0 2px 20px rgba(0,0,0.1);/*sombra: eixo x, eixo y, desfoque  da cor*/
+position:relative;/*grudar no topo ao rolar a pagina*/
+top:0;/*distancia do topo ao grudar*/
+z-index: 1000;/*garante que fique acima dos outros elementos*/
+}
+header img{
+    height: 60px;/*fixando a altura da imagem em pixel*/
+    width: auto;/*ajusta a largura automaticamente de acordo com a altura(mantem proporcional a imagem)*/
+    transition: transform 0.3 ease;/*transiçao suave de 3 segundos para animaçao*/
+}
+header img:hover{/*hover: quando passa o moise por cima faz alguma coisa*/
+    transform: scale(1.05);/*aumenta 5% do tamanho da imagem original*/
+}
